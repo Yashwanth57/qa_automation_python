@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.2 (Python 3.6.8 on win32)" generated="20200305 19:43:56.861">
+<suite id="s1" name="Test Submissions" source="C:\Users\yashu\OneDrive\Documents\GitHub\qa_automation_python\test_submissions">
+<suite id="s1-s1" name="Ww Test Scenario" source="C:\Users\yashu\OneDrive\Documents\GitHub\qa_automation_python\test_submissions\ww_test_scenario.robot">
+<test id="s1-s1-t1" name="validate weight watchers web page">
+<kw name="Given user navigates to the address">
+<arguments>
+<arg>${web_address_id}</arg>
+</arguments>
+<kw name="Navigate To Page" library="web_page_objects">
+<arguments>
+<arg>${web_address}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:02.277" endtime="20200305 19:44:08.968"></status>
+</kw>
+<kw name="Maximize Browser" library="web_page_objects">
+<status status="PASS" starttime="20200305 19:44:08.968" endtime="20200305 19:44:18.980"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:02.277" endtime="20200305 19:44:18.980"></status>
+</kw>
+<kw name="user gets the title of the page">
+<assign>
+<var>${first_page_title}</var>
+</assign>
+<kw name="Get Page Title" library="web_page_objects">
+<arguments>
+<arg>${convert_uni}</arg>
+</arguments>
+<assign>
+<var>${result_title}</var>
+</assign>
+<msg timestamp="20200305 19:44:18.987" level="INFO">${result_title} = WW (Weight Watchers): Weight Loss &amp; Wellness Help</msg>
+<status status="PASS" starttime="20200305 19:44:18.981" endtime="20200305 19:44:18.987"></status>
+</kw>
+<msg timestamp="20200305 19:44:18.988" level="INFO">${first_page_title} = WW (Weight Watchers): Weight Loss &amp; Wellness Help</msg>
+<status status="PASS" starttime="20200305 19:44:18.980" endtime="20200305 19:44:18.988"></status>
+</kw>
+<kw name="And SHOULD BE EQUAL AS STRINGS" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${first_page_title}</arg>
+<arg>${HOME_PAGE_TITLE}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:18.988" endtime="20200305 19:44:18.988"></status>
+</kw>
+<kw name="user clicks on studio button">
+<arguments>
+<arg>${studio_text_id}</arg>
+</arguments>
+<assign>
+<var>${studio_btn_locator}</var>
+</assign>
+<kw name="Get Element By Property" library="web_page_objects">
+<arguments>
+<arg>${link_text}</arg>
+</arguments>
+<assign>
+<var>${element_locator}</var>
+</assign>
+<msg timestamp="20200305 19:44:19.037" level="INFO">${element_locator} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="e727bdd7-2b24-4799-9e0c-fd2478fabc75")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:18.989" endtime="20200305 19:44:19.037"></status>
+</kw>
+<kw name="user waits till the element visibles">
+<arguments>
+<arg>${element_locator}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${element_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:19.037" endtime="20200305 19:44:19.037"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:19.037" endtime="20200305 19:44:19.037"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${element_locator}</arg>
+</arguments>
+<msg timestamp="20200305 19:44:19.038" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="e727bdd7-2b24-4799-9e0c-fd2478fabc75")&gt;'.</msg>
+<status status="PASS" starttime="20200305 19:44:19.038" endtime="20200305 19:44:19.257"></status>
+</kw>
+<msg timestamp="20200305 19:44:19.258" level="INFO">${studio_btn_locator} = None</msg>
+<status status="PASS" starttime="20200305 19:44:18.988" endtime="20200305 19:44:19.258"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${20}</arg>
+</arguments>
+<msg timestamp="20200305 19:44:39.259" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20200305 19:44:19.258" endtime="20200305 19:44:39.259"></status>
+</kw>
+<kw name="Then dismiss popup" library="web_page_objects">
+<arguments>
+<arg>${30}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:39.260" endtime="20200305 19:44:39.324"></status>
+</kw>
+<kw name="user gets the title of the page">
+<arguments>
+<arg>${True}</arg>
+</arguments>
+<assign>
+<var>${second_page_title}</var>
+</assign>
+<kw name="Get Page Title" library="web_page_objects">
+<arguments>
+<arg>${convert_uni}</arg>
+</arguments>
+<assign>
+<var>${result_title}</var>
+</assign>
+<msg timestamp="20200305 19:44:39.330" level="INFO">${result_title} = Find WW Studios &amp; Meetings Near You | WW USA</msg>
+<status status="PASS" starttime="20200305 19:44:39.325" endtime="20200305 19:44:39.330"></status>
+</kw>
+<msg timestamp="20200305 19:44:39.330" level="INFO">${second_page_title} = Find WW Studios &amp; Meetings Near You | WW USA</msg>
+<status status="PASS" starttime="20200305 19:44:39.325" endtime="20200305 19:44:39.330"></status>
+</kw>
+<kw name="And SHOULD BE EQUAL AS STRINGS" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${second_page_title}</arg>
+<arg>${STUDIO_PAGE_TITLE}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:39.331" endtime="20200305 19:44:39.331"></status>
+</kw>
+<kw name="Then user inputs zipcode in search bar field">
+<arguments>
+<arg>${location_zip}</arg>
+<arg>element_name=${search_bar_field_id}</arg>
+</arguments>
+<kw name="Get Element By Property" library="web_page_objects">
+<arguments>
+<arg>${link_text}</arg>
+<arg>${element_name}</arg>
+</arguments>
+<assign>
+<var>${search_locator}</var>
+</assign>
+<msg timestamp="20200305 19:44:39.358" level="INFO">${search_locator} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="eda371d1-4f88-4ddf-bd3f-e7a721d0fc64")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:39.331" endtime="20200305 19:44:39.358"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${search_locator}</arg>
+<arg>${zip_address}</arg>
+</arguments>
+<msg timestamp="20200305 19:44:39.358" level="INFO">Typing text '10011' into text field '&lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="eda371d1-4f88-4ddf-bd3f-e7a721d0fc64")&gt;'.</msg>
+<status status="PASS" starttime="20200305 19:44:39.358" endtime="20200305 19:44:39.438"></status>
+</kw>
+<kw name="Submit Form" library="SeleniumLibrary">
+<doc>Submits a form identified by ``locator``.</doc>
+<arguments>
+<arg>${search_locator}</arg>
+</arguments>
+<msg timestamp="20200305 19:44:39.438" level="INFO">Submitting form '&lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="eda371d1-4f88-4ddf-bd3f-e7a721d0fc64")&gt;'.</msg>
+<status status="PASS" starttime="20200305 19:44:39.438" endtime="20200305 19:44:39.576"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:39.331" endtime="20200305 19:44:39.576"></status>
+</kw>
+<kw name="Get Element By Class" library="web_page_objects">
+<arguments>
+<arg>${location_name_id}</arg>
+</arguments>
+<assign>
+<var>${location_name}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.202" level="INFO">${location_name} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="7e849838-ebe5-44b0-9792-bc352a655f2f")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:39.576" endtime="20200305 19:44:40.203"></status>
+</kw>
+<kw name="And user waits till the element visibles">
+<arguments>
+<arg>${location_name}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${element_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:40.205" endtime="20200305 19:44:40.205"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:40.203" endtime="20200305 19:44:40.206"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${location_name}</arg>
+</arguments>
+<assign>
+<var>${location_text}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.277" level="INFO">${location_text} = WW Studio Flatiron</msg>
+<status status="PASS" starttime="20200305 19:44:40.206" endtime="20200305 19:44:40.277"></status>
+</kw>
+<kw name="Get Element By Class" library="web_page_objects">
+<arguments>
+<arg>${location_distance_id}</arg>
+</arguments>
+<assign>
+<var>${location_dist}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.294" level="INFO">${location_dist} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="f4482330-4cab-4dbd-a9f7-ae76602719bf")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:40.277" endtime="20200305 19:44:40.294"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${location_dist}</arg>
+</arguments>
+<assign>
+<var>${distance_text}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.321" level="INFO">${distance_text} = 0.49 mi.</msg>
+<status status="PASS" starttime="20200305 19:44:40.294" endtime="20200305 19:44:40.321"></status>
+</kw>
+<kw name="Then user selects a location">
+<arguments>
+<arg>${location_name_id}</arg>
+</arguments>
+<kw name="Get Element By Class" library="web_page_objects">
+<arguments>
+<arg>${class_name}</arg>
+</arguments>
+<assign>
+<var>${idofdest}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.328" level="INFO">${idofdest} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="7e849838-ebe5-44b0-9792-bc352a655f2f")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:40.321" endtime="20200305 19:44:40.328"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${idofdest}</arg>
+</arguments>
+<msg timestamp="20200305 19:44:40.329" level="INFO">Clicking button '&lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="7e849838-ebe5-44b0-9792-bc352a655f2f")&gt;'.</msg>
+<status status="PASS" starttime="20200305 19:44:40.329" endtime="20200305 19:44:40.631"></status>
+</kw>
+<kw name="user waits till the element visibles">
+<arguments>
+<arg>${idofdest}</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${element_id}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:40.632" endtime="20200305 19:44:40.632"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:40.631" endtime="20200305 19:44:40.632"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:40.321" endtime="20200305 19:44:40.632"></status>
+</kw>
+<kw name="Get Element By Class" library="web_page_objects">
+<arguments>
+<arg>${location_name_id}</arg>
+</arguments>
+<assign>
+<var>${result_location}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.715" level="INFO">${result_location} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="ba6f5f2c-b85c-4163-ac83-d8484e9628d9")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:40.632" endtime="20200305 19:44:40.715"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of element identified by ``locator``.</doc>
+<arguments>
+<arg>${result_location}</arg>
+</arguments>
+<assign>
+<var>${result_location_text}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.733" level="INFO">${result_location_text} = WW Studio Flatiron</msg>
+<status status="PASS" starttime="20200305 19:44:40.716" endtime="20200305 19:44:40.733"></status>
+</kw>
+<kw name="And SHOULD BE EQUAL AS STRINGS" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<arguments>
+<arg>${result_location_text}</arg>
+<arg>${location_text}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:40.734" endtime="20200305 19:44:40.734"></status>
+</kw>
+<kw name="Then user drags the scroll bar">
+<arguments>
+<arg>${operating_hour_xpath}</arg>
+</arguments>
+<kw name="Get Element By Xpath" library="web_page_objects">
+<arguments>
+<arg>${x_path}</arg>
+</arguments>
+<assign>
+<var>${dest_element}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.747" level="INFO">${dest_element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="93ec96368bda90196e3f84c238c90ed1", element="60d95ec6-50cb-4a55-ba5a-98c6b896a14f")&gt;</msg>
+<status status="PASS" starttime="20200305 19:44:40.735" endtime="20200305 19:44:40.747"></status>
+</kw>
+<kw name="Scroll Web Page" library="web_page_objects">
+<arguments>
+<arg>${dest_element}</arg>
+</arguments>
+<assign>
+<var>${coords}</var>
+</assign>
+<msg timestamp="20200305 19:44:40.754" level="INFO">${coords} = None</msg>
+<status status="PASS" starttime="20200305 19:44:40.747" endtime="20200305 19:44:40.754"></status>
+</kw>
+<status status="PASS" starttime="20200305 19:44:40.734" endtime="20200305 19:44:40.754"></status>
+</kw>
+<kw name="user gets operating hours or appointments">
+<arguments>
+<arg>${operating_hours_class}</arg>
+</arguments>
+<assign>
+<var>${today_work_hours}</var>
+</assign>
+<kw name="Get Operating Hours Or Appointments" library="web_page_objects">
+<arguments>
+<arg>${class_name}</arg>
+</arguments>
+<assign>
+<var>${hours}</var>
+</assign>
+<msg timestamp="20200305 19:44:41.021" level="INFO">${hours} = ['THU\n7:45 AM – 2:00 PM\n4:45 PM – 7:15 PM']</msg>
+<status status="PASS" starttime="20200305 19:44:40.755" endtime="20200305 19:44:41.021"></status>
+</kw>
+<msg timestamp="20200305 19:44:41.021" level="INFO">${today_work_hours} = ['THU\n7:45 AM – 2:00 PM\n4:45 PM – 7:15 PM']</msg>
+<status status="PASS" starttime="20200305 19:44:40.754" endtime="20200305 19:44:41.021"></status>
+</kw>
+<kw name="user gets operating hours or appointments">
+<arguments>
+<arg>${employee_schedule_day}</arg>
+</arguments>
+<assign>
+<var>${appointment_schedules}</var>
+</assign>
+<kw name="Get Operating Hours Or Appointments" library="web_page_objects">
+<arguments>
+<arg>${class_name}</arg>
+</arguments>
+<assign>
+<var>${hours}</var>
+</assign>
+<msg timestamp="20200305 19:44:41.225" level="INFO">${hours} = ['THU\n8:15 AM\nSTEVEN H.\n9:15 AM\nSTEVEN H.\n12:15 PM\nDIANE M.\n5:15 PM\nMINDI K.\n6:15 PM\nMINDI K.']</msg>
+<status status="PASS" starttime="20200305 19:44:41.022" endtime="20200305 19:44:41.225"></status>
+</kw>
+<msg timestamp="20200305 19:44:41.226" level="INFO">${appointment_schedules} = ['THU\n8:15 AM\nSTEVEN H.\n9:15 AM\nSTEVEN H.\n12:15 PM\nDIANE M.\n5:15 PM\nMINDI K.\n6:15 PM\nMINDI K.']</msg>
+<status status="PASS" starttime="20200305 19:44:41.021" endtime="20200305 19:44:41.226"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${appointment_schedules}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:41.226" endtime="20200305 19:44:41.226"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>${today_work_hours}</arg>
+</arguments>
+<status status="PASS" starttime="20200305 19:44:41.226" endtime="20200305 19:44:41.227"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>${5}</arg>
+</arguments>
+<msg timestamp="20200305 19:44:46.228" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20200305 19:44:41.227" endtime="20200305 19:44:46.229"></status>
+</kw>
+<kw name="Then close web browser" library="web_page_objects">
+<status status="PASS" starttime="20200305 19:44:46.230" endtime="20200305 19:44:50.326"></status>
+</kw>
+<doc>Validating UI web page</doc>
+<tags>
+<tag>WW_REGRESSION</tag>
+</tags>
+<status status="PASS" starttime="20200305 19:44:02.276" endtime="20200305 19:44:50.327" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200305 19:43:56.881" endtime="20200305 19:44:50.327"></status>
+</suite>
+<doc>Test Suite for Weight Watchers Web Page Validation</doc>
+<status status="PASS" starttime="20200305 19:43:56.863" endtime="20200305 19:44:50.329"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">WW_REGRESSION</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Test Submissions">Test Submissions</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Ww Test Scenario">Test Submissions.Ww Test Scenario</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
